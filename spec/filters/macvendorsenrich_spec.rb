@@ -1,12 +1,12 @@
 # encoding: utf-8
 require 'spec_helper'
-require "logstash/filters/netflowenrich"
+require "logstash/filters/macvendorsenrich"
 
-describe LogStash::Filters::Netflowenrich do
+describe LogStash::Filters::Macvendorsenrich do
   describe "Set to Hello World" do
     let(:config) do <<-CONFIG
       filter {
-        netflowenrich {
+       macvendors {
           message => "Hello World"
         }
       }

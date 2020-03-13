@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
-  s.name = 'logstash-filter-netflowenrich'
-  s.version = '1.0.3'
+  s.name = 'logstash-filter-macvendorsenrich'
+  s.version = '1.0.2'
   s.licenses = ['Apache License (2.0)']
-  s.summary = "This filter split ths filter split the json package into one-minute subpackages to be able to evaluate it. Fields like timestamp, first-switched, pkts and bytes are modified in the process."
+  s.summary = "This filter obtain the name of the mac vendor from the MAC stored in the flow."
   s.description = "This gem is a Logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/logstash-plugin install gemname. This gem is not a stand-alone program"
   s.authors = ["Elastic"]
   s.email = 'systems@redborder.com'
