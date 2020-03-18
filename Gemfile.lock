@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    logstash-filter-netflowenrich (1.0.3)
+    logstash-filter-macvendorsenrich (1.0.3)
       logstash-core-plugin-api (~> 2.0)
 
 GEM
@@ -126,7 +126,7 @@ PLATFORMS
 
 DEPENDENCIES
   logstash-devutils
-  logstash-filter-netflowenrich!
+  logstash-filter-macvendorsenrich!
 
 BUNDLED WITH
    2.1.4
