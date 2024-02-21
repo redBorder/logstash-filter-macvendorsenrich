@@ -27,7 +27,6 @@ class LogStash::Filters::Macvendorsenrich < LogStash::Filters::Base
         event.set("client_mac_vendor" , vendor_name.to_s)
       end
     end
-    yield event
     filter_matched(event)
   end # def filter
 end # class LogStash::Filters::Macvendor
