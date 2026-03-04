@@ -14,9 +14,15 @@ class LogStash::Filters::Macvendorsenrich < LogStash::Filters::Base
 
   public
   def register
-    @mac_vendors_hash = CSV.read(@path, quote_char: "\x00", headers: false, col_sep: "|" ).to_h
+    @mac_vendors_hash = {}
+    if File.exist?(@path)
+      begin
+        @mac_vendors_hash = CSV.read(@path, quote_char: "\x00", headers: false, col_sep: "|" ).to_h
+      rescue
+        @mac_vendors_hash = {}
+      end
+    end
   end
-
 
   def filter(event)
     if !event.include?("client_mac_vendor") and event.include?("client_mac")
